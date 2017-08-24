@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Chat App</title>
+    <link rel="stylesheet" href="static/css/normalize.min.css">
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<body>
+<div id="login">
+    <center>
+        <div class="form">
+            <h2 class="title">What's your nickname?</h2>
+            <input id="nickname" type="text" maxlength="14" autofocus/>
+        </div>
+    </center>
+</div>
+
+<div id="ui" class="ui" style="display: none">
+    <div class="left-menu">
+        <menu id="friendList" class="list-friends">
+        </menu>
+    </div>
+
+    <div class="chat">
+        <div class="top">
+            <div class="avatar">
+                <img width="50" height="50"
+                     src="static/images/group-icon.png">
+            </div>
+            <div class="info">
+                <div class="name">Public Chat Room</div>
+                <div id="messageCount" class="count"></div>
+            </div>
+        </div>
+
+        <ul id="messageList" class="messages">
+        </ul>
+
+        <div class="write-form">
+            <textarea id="message" placeholder="Type your message" name="e"
+                      rows="2" autofocus></textarea>
+            <span id="sendMessage" class="send">Send</span>
+        </div>
+    </div>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src='static/js/jquery.min.js'></script>
+<script src='static/js/jquery.nicescroll.js'></script>
+<script src="static/js/app.js"></script>
+</body>
+</html>
